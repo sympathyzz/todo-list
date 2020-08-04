@@ -1,3 +1,5 @@
-export const addToDo = (text) => {
-    return {type:"ADD_TODO",text}
-}
+const addToDo = (text) => ({
+    type:"ADD_TODO",
+    text:text
+})
+export default addToDo

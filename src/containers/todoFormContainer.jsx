@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
-import TodoForm from '../components/todoForm'
+import TodoForm from '../components/TodoForm'
+import  addToDo  from '../action/index'
 
 const mapDispatchToProps = (dispatch) => {
-    return {       
-        addTodo: (text) => {
-            dispatch(addTodo(text))
-        }
+    return {
+        addToDo: (text) => dispatch(addToDo(text))
     }
 }
 
-export default connect(null,mapDispatchToProps)(TodoForm)
+const TodoFormContainer = connect(null, mapDispatchToProps)(TodoForm)
+export default TodoFormContainer;

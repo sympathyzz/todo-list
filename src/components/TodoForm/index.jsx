@@ -9,8 +9,8 @@ class ToDoForm extends React.Component {
         }
     }
 
-    handleSubmit() {
-        this.props.addTodo(this.state.value)
+    handleSubmit=(e)=> {
+        this.props.addToDo(this.state.value)
     }
 
     changeContent = (e) => {
@@ -19,6 +19,7 @@ class ToDoForm extends React.Component {
 
 
     render() {
+       
         return (
             <div>
                 <input type="text" onChange={this.changeContent} />

@@ -1,5 +1,8 @@
-const addToDo = (text) => ({
+export const addToDo = (text) => ({
     type:"ADD_TODO",
     text:text
 })
-export default addToDo
+export const deleteTodo = (index) => ({
+    type:"DELETE_TODO",
+    index:index
+})

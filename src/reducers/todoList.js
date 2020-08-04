@@ -4,12 +4,12 @@ const todoList=(state=[],action)=>{
             return [...state,action.text];
         case "DELETE_TODO":
             return [...state].filter(
-                (value,index)=>{
-                    return action.index!==index
+                (item,index)=>{
+                    return index!==action.index
                 }               
-            );  
+            ); 
         default:
-            return state;    
+            return [...state];    
     }
 }
 

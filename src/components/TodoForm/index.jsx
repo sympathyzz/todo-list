@@ -4,25 +4,21 @@ class ToDoForm extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            value: ""
-        }
     }
 
-    handleSubmit=(e)=> {
-        this.props.addToDo(this.state.value)
+    handleSubmit=()=> {
+        let inputValue = document.getElementById('inputValue').value;
+        this.props.addToDo(inputValue)
+        document.getElementById('inputValue').value=""
     }
 
-    changeContent = (e) => {
-        this.setState({ value: e.target.value })
-    }
 
 
     render() {
        
         return (
             <div>
-                <input type="text" onChange={this.changeContent} />
+                <input id="inputValue" type="text" />
                 <input type="submit" onClick={this.handleSubmit} value="提交" />
             </div>
         )

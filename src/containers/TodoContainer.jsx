@@ -1,16 +1,18 @@
 import { connect } from 'react-redux'
 import Todo from '../components/Todo'
-import  {deleteTodo}  from '../action/index'
+import  {deleteTodo,markTodo}  from '../action/index'
 
 const mapStateToProps = (state) => {
     return {
-     todoList: state.todoList
+     todoList: state.todoList,
+     state:state
     }
  };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        deleteTodo: (index) => dispatch(deleteTodo(index))
+        deleteTodo: (index) => dispatch(deleteTodo(index)),
+        markTodo: (index) => dispatch(markTodo(index))
     }
 };
 

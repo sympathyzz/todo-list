@@ -4,7 +4,6 @@ import TodoListContainer from "./containers/TodoListContainer";
 import UndoListContainer from "./containers/UndoListContainer";
 import TodoFormContainer from "./containers/TodoFormContainer";
 import { HashRouter, Link, Route, Switch } from 'react-router-dom';
-//API URL: https://5e9ec500fb467500166c4658.mockapi.io/todos
 function App() {
   return (
     <div className="App">

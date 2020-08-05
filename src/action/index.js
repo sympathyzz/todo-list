@@ -10,3 +10,7 @@ export const markTodo = (id) => ({
     type:"MARK_TODO",
     id
 })
+export const getAll = (todo) => ({
+    type:"GET_ALL",
+    list:todo
+})

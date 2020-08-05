@@ -1,16 +1,18 @@
 import React from 'react'
+import api from '../../api'
 
 class ToDoForm extends React.Component {
 
     handleSubmit=()=> {
         let inputValue = document.getElementById('inputValue').value;
-        
-        this.props.addToDo({
-            id:0,
+        let todo={
             content:inputValue,
             status:false
-        })
+        }
+        api.insert(todo).then(response=>{
+            this.props.addToDo(response.data)
         document.getElementById('inputValue').value=""
+        })
     }
 
     render() {

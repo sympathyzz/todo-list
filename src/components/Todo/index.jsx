@@ -1,13 +1,18 @@
 import React from 'react'
 import './todo.css';
+import api from '../../api'
 
 class ToDo extends React.Component {
 
-    handleDelete=()=> {
-        this.props.deleteTodo(this.props.todo.id)
+    handleDelete=()=> {       
+        api.deleteOne(this.props.todo.id).then(response=>{
+            this.props.deleteTodo(this.props.todo.id)
+        })
     }
-    handleMark=()=>{
-        this.props.markTodo(this.props.todo.id)
+    handleMark=()=>{      
+        api.update(this.props.todo).then(response=>{
+            this.props.markTodo(this.props.todo.id)
+        })
     }
     render() {
         return (

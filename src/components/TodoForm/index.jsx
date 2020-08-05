@@ -1,18 +1,12 @@
 import React from 'react'
 
 class ToDoForm extends React.Component {
-    constructor(props) {
-        super(props)
-
-    }
 
     handleSubmit=()=> {
         let inputValue = document.getElementById('inputValue').value;
         this.props.addToDo(inputValue)
         document.getElementById('inputValue').value=""
     }
-
-
 
     render() {
        

@@ -2,12 +2,6 @@ import { connect } from 'react-redux'
 import Todo from '../components/Todo'
 import  {deleteTodo,markTodo}  from '../action/index'
 
-const mapStateToProps = (state) => {
-    return {
-     todoList: state.todoList,
-     state:state
-    }
- };
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -16,5 +10,5 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-const TodoContainer = connect(mapStateToProps, mapDispatchToProps)(Todo)
+const TodoContainer = connect(null, mapDispatchToProps)(Todo)
 export default TodoContainer;

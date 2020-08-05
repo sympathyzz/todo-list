@@ -4,7 +4,12 @@ class ToDoForm extends React.Component {
 
     handleSubmit=()=> {
         let inputValue = document.getElementById('inputValue').value;
-        this.props.addToDo(inputValue)
+        
+        this.props.addToDo({
+            id:0,
+            content:inputValue,
+            status:false
+        })
         document.getElementById('inputValue').value=""
     }
 

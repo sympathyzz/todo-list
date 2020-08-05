@@ -8,7 +8,7 @@ class ToDoList extends React.Component {
         return  (<React.Fragment>
                 <h2>todo list</h2>
                 <div>
-                    {this.props.todoList.map((item, index) => <TodoContainer key={index} index={index} item={item} />)}
+                    {this.props.todoList.map((todo, index) => <TodoContainer key={index} index={index} todo={todo} />)}
                 </div>
             </React.Fragment>)
         

@@ -1,16 +1,16 @@
 const todoList=(state=[],action)=>{
     switch(action.type){
         case "ADD_TODO":
-            return [...state,{text:action.text,isDone:false}];
+            return [...state,action.todo];
         case "DELETE_TODO":
             return [...state].filter(
-                (index)=>{
-                    return index!==action.index
+                (todo)=>{
+                    return action.id!==todo.id;
                 }               
             ); 
         case "MARK_TODO":
-            return state.map((todo, index) => {
-                return {text: todo.text, isDone:index === action.index? !todo.isDone: todo.isDone}
+            return state.map((todo) => {
+                return {content: todo.content, status:todo.id === action.todo.id? !todo.status: todo.status}
             });
         default:
             return [...state];    

@@ -5,8 +5,8 @@ import  {deleteTodo,markTodo}  from '../action/index'
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        deleteTodo: (index) => dispatch(deleteTodo(index)),
-        markTodo: (index) => dispatch(markTodo(index))
+        deleteTodo: (id) => dispatch(deleteTodo(id)),
+        markTodo: (id) => dispatch(markTodo(id))
     }
 };
 

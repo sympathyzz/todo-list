@@ -4,7 +4,7 @@ import  {addToDo}  from '../action/index'
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToDo: (text) => dispatch(addToDo(text))
+        addToDo: (todo) => dispatch(addToDo(todo))
     }
 }
 

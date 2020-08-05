@@ -1,12 +1,12 @@
-export const addToDo = (text) => ({
+export const addToDo = (todo) => ({
     type:"ADD_TODO",
-    text:text
+    todo
 })
-export const deleteTodo = (index) => ({
+export const deleteTodo = (id) => ({
     type:"DELETE_TODO",
-    index:index
+    id
 })
-export const markTodo = (index) => ({
+export const markTodo = (id) => ({
     type:"MARK_TODO",
-    index:index
+    id
 })

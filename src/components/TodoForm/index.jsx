@@ -1,5 +1,6 @@
 import React from 'react'
 import api from '../../api'
+import {Button,Upload,Input, Space} from 'antd'
 
 class ToDoForm extends React.Component {
 
@@ -19,8 +20,10 @@ class ToDoForm extends React.Component {
        
         return (
             <div>
-                <input id="inputValue" type="text" />
-                <input type="submit" onClick={this.handleSubmit} value="提交" />
+                <Space>
+                <Input id="inputValue" type="text" style={{ width:500 }}/>
+                <Button type="primary" onClick={this.handleSubmit}>提交</Button>
+                </Space>
             </div>
         )
     }

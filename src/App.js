@@ -8,10 +8,9 @@ function App() {
   return (
     <div className="App">
       <HashRouter>
-        <ul>
-          <li> <Link to="/">All Todo List</Link> </li>
-          <li> <Link to="/Undo">Undo List</Link> </li>
-        </ul>
+         <h4 style={{position:"fixed"}}><Link to="/">All Todo List</Link></h4>
+         <h4 style={{top:20,position:"fixed"}}><Link to="/Undo">Undo List</Link> </h4>
+        
         <Switch>
           <Route exact path="/" component={TodoListContainer} />
           <Route path="/Undo" component={UndoListContainer} />

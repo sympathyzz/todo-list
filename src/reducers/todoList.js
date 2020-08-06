@@ -10,7 +10,7 @@ const todoList=(state=[],action)=>{
             ); 
         case "MARK_TODO":
             return state.map((todo) => {
-                return {content: todo.content, status:todo.id === action.id? !todo.status: todo.status}
+                return {id:todo.id,content: todo.content, status:todo.id === action.id? !todo.status: todo.status}
             });
         case "GET_ALL":
             return action.list   

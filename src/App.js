@@ -13,7 +13,7 @@ function App() {
         
         <Switch>
           <Route exact path="/" component={TodoListContainer} />
-          <Route path="/Undo" component={UndoListContainer} />
+          <Route exact path="/Undo" component={UndoListContainer} />
         </Switch>
       </HashRouter>
       <TodoFormContainer></TodoFormContainer>

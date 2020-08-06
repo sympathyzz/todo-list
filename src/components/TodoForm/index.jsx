@@ -1,6 +1,6 @@
 import React from 'react'
 import api from '../../api'
-import {Button,Upload,Input, Space} from 'antd'
+import {Button,Input, Space} from 'antd'
 
 class ToDoForm extends React.Component {
 
@@ -12,7 +12,6 @@ class ToDoForm extends React.Component {
         }
         api.insert(todo).then(response=>{
             this.props.addToDo(response.data)
-        document.getElementById('inputValue').value=""
         })
     }
 
